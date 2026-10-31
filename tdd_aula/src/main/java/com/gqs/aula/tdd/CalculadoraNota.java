@@ -3,9 +3,12 @@ package com.gqs.aula.tdd;
 public class CalculadoraNota {
 
     public static final double NOTA_MINIMA_APROVACAO = 70;
+    public static final double MAX_A1 = 30;
+    public static final double MAX_A2 = 30;
+    public static final double MAX_A3 = 40;
 
     public double calcularNotaFinal(double a1, double a2, double a3) {
-        if (a1 < 0 || a1 > 30 || a2 < 0 || a2 > 30 || a3 < 0 || a3 > 40) {
+        if (a1 < 0 || a1 > MAX_A1 || a2 < 0 || a2 > MAX_A2 || a3 < 0 || a3 > MAX_A3) {
             throw new IllegalArgumentException("Notas fora do limite permitido");
         }
         return a1 + a2 + a3;
